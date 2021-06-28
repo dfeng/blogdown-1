@@ -52,8 +52,8 @@ html_page = function(
     keep_md = keep_md,
     pre_knit = pre_knit,
     post_processor = post_processor,
-    base_format = bookdown::html_document2(
-      ..., number_sections = number_sections, theme = NULL,
+    base_format = bookdown::tufte_html2(
+      ..., number_sections = number_sections,
       self_contained = self_contained, highlight = highlight,
       pandoc_args = c('-M', 'link-citations=true', pandoc_args),
       template = template %n% pkg_file('resources', 'template-minimal.html')
